@@ -1,0 +1,41 @@
+{% extends "base.html" %}
+{% load static %}
+{% load wagtailimages_tags %}
+
+{% block extra_css %}
+    <link rel="stylesheet" type="text/css" href="{% static 'css/home_page.css' %}">
+{% endblock %}
+
+{% block content %}
+<section class="hero-section">
+    <div class="hero-container">
+        <div class="hero-text">
+            <blockquote class="hero-quote">
+                “{{ page.quote }}”
+            </blockquote>
+            <p class="hero-author">— {{ page.quote_author }}</p>
+            <a href="#" class="hero-button">{{ page.button_text }}</a>
+        </div>
+
+        <div class="hero-image-container">
+            {% if page.hero_image %}
+                {% image page.hero_image fill-500x500 class="circle-image" %}
+            {% endif %}
+        </div>
+    </div>
+</section>
+<section class="courses-section">
+    <h2 class="courses-title">Courses</h2>
+
+    <div class="courses-container">
+        {% for block in page.courses_section %}
+            <div class="course-circle" style="background-color: {{ block.value.background_color }};">
+                <div class="course-content">
+                    <div class="course-icon">M</div>
+                    <h3>{{ block.value.title }}</h3>
+                </div>
+            </div>
+        {% endfor %}
+    </div>
+</section>
+{% endblock %}
