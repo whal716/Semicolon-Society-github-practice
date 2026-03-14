@@ -1,8 +1,13 @@
-# Semicolon-Society-github-practice
-For us to warm up on github while we wait.
+Link to the sheet: https://docs.google.com/spreadsheets/d/1Vdptx4DP1JY0OH_8sOP95LI3qQ3oqpEmvc1jXamARQs/edit?gid=0#gid=0
 
-Bheese Curger
+`pip install fastapi uvicorn`
 
-; society
+cd to the folder "backend"
 
-Does Discord notify every change??
+`uvicorn main:app --reload`
+
+
+Then click open "index.html" in "frontend"
+
+In this demo only 3 parameters can be changed, namely title, content and color. 
+Don't modify the first row, add what ever below that. 
