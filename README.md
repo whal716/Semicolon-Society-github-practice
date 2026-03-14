@@ -1,6 +1,6 @@
 Link to the sheet: https://docs.google.com/spreadsheets/d/1Vdptx4DP1JY0OH_8sOP95LI3qQ3oqpEmvc1jXamARQs/edit?gid=0#gid=0
 
-`pip install fastapi uvicorn`
+`pip install fastapi uvicorn httpx python-dotenv`
 
 cd to the folder "backend"
 
